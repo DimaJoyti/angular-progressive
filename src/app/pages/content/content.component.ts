@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { ContentfulService } from "../../service/contentful.service";
 import { Observable } from "rxjs/Observable";
+import { ContentfulService } from "./contentful.service";
 
 @Component({
   selector: "content",
@@ -19,3 +19,4 @@ export class ContentComponent implements OnInit {
   }
 
 }
+
