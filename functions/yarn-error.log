@@ -1,0 +1,41 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files\Cmder\bin;C:\Program Files\Cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Program Files\Cmder\vendor\conemu-maximus5;C:\Program Files\Cmder\vendor\conemu-maximus5\ConEmu;C:\Python27\;C:\Python27\Scripts;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin;C:\ProgramData\Oracle\Java\javapath;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Amazon\AWSCLI\;C:\Users\awsin\AppData\Roaming\nvm;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\awsin\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin;C:\ProgramData\chocolatey\bin;C:\Users\awsin\.cargo\bin;C:\Users\awsin\Anaconda3;C:\Users\awsin\Anaconda3\Library\mingw-w64\bin;C:\Users\awsin\Anaconda3\Library\usr\bin;C:\Users\awsin\Anaconda3\Library\bin;C:\Users\awsin\Anaconda3\Scripts;C:\Users\awsin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\nodejs;C:\Users\awsin\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code Insiders\bin;C:\Users\awsin\AppData\Local\Yarn\bin;C:\ProgramData\chocolatey\lib\msys2;C:\tools\msys64;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\share\vim\vim74;C:\Program Files\Cmder\
+
+Yarn version: 
+  1.2.0
+
+Node version: 
+  8.4.0
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "functions",
+    "description": "Cloud Functions for Firebase",
+    "scripts": {
+      "serve": "firebase serve --only functions",
+      "shell": "firebase experimental:functions:shell",
+      "start": "npm run shell",
+      "deploy": "firebase deploy --only functions",
+      "logs": "firebase functions:log"
+    },
+    "dependencies": {
+      "firebase-admin": "~5.4.2",
+      "firebase-functions": "^0.7.1"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'D:\Projects\Angular\angular-progressive\functions\node_modules\firebase-admin\node_modules\@types\node'
