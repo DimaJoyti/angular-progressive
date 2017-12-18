@@ -2,7 +2,7 @@ Arguments:
   C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
 
 PATH: 
-  C:\Program Files\Cmder\bin;C:\Program Files\Cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Program Files\Cmder\vendor\conemu-maximus5;C:\Program Files\Cmder\vendor\conemu-maximus5\ConEmu;C:\Python27\;C:\Python27\Scripts;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin;C:\ProgramData\Oracle\Java\javapath;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Amazon\AWSCLI\;C:\Users\awsin\AppData\Roaming\nvm;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\awsin\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin;C:\ProgramData\chocolatey\bin;C:\Users\awsin\.cargo\bin;C:\Users\awsin\Anaconda3;C:\Users\awsin\Anaconda3\Library\mingw-w64\bin;C:\Users\awsin\Anaconda3\Library\usr\bin;C:\Users\awsin\Anaconda3\Library\bin;C:\Users\awsin\Anaconda3\Scripts;C:\Users\awsin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\nodejs;C:\Users\awsin\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code Insiders\bin;C:\Users\awsin\AppData\Local\Yarn\bin;C:\ProgramData\chocolatey\lib\msys2;C:\tools\msys64;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\share\vim\vim74;C:\Program Files\Cmder\
+  C:\Program Files\Cmder\bin;C:\Program Files\Cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Program Files\Cmder\vendor\conemu-maximus5;C:\Program Files\Cmder\vendor\conemu-maximus5\ConEmu;C:\Python27\;C:\Python27\Scripts;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin;C:\ProgramData\Oracle\Java\javapath;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Amazon\AWSCLI\;C:\Users\awsin\AppData\Roaming\nvm;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\awsin\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Apache\maven\bin;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Users\awsin\.cargo\bin;C:\Users\awsin\Anaconda3;C:\Users\awsin\Anaconda3\Library\mingw-w64\bin;C:\Users\awsin\Anaconda3\Library\usr\bin;C:\Users\awsin\Anaconda3\Library\bin;C:\Users\awsin\Anaconda3\Scripts;C:\Users\awsin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Users\awsin\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code Insiders\bin;C:\Users\awsin\AppData\Local\Yarn\bin;C:\ProgramData\chocolatey\lib\msys2;C:\tools\msys64;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\share\vim\vim74;C:\Program Files\Cmder\
 
 Yarn version: 
   1.2.0
@@ -30,18 +30,19 @@ npm manifest:
     },
     "private": true,
     "dependencies": {
-      "@angular/animations": "^5.1.0",
+      "@angular/animations": "^5.1.1",
       "@angular/cdk": "^5.0.1",
-      "@angular/common": "^5.1.0",
-      "@angular/compiler": "^5.1.0",
-      "@angular/core": "^5.1.0",
-      "@angular/forms": "^5.1.0",
-      "@angular/http": "^5.1.0",
+      "@angular/common": "^5.1.1",
+      "@angular/compiler": "^5.1.1",
+      "@angular/core": "^5.1.1",
+      "@angular/forms": "^5.1.1",
+      "@angular/http": "^5.1.1",
       "@angular/material": "^5.0.1",
-      "@angular/platform-browser": "^5.1.0",
-      "@angular/platform-browser-dynamic": "^5.1.0",
-      "@angular/router": "^5.1.0",
-      "@angular/service-worker": "^5.1.0",
+      "@angular/platform-browser": "^5.1.1",
+      "@angular/platform-browser-dynamic": "^5.1.1",
+      "@angular/platform-server": "^5.1.1",
+      "@angular/router": "^5.1.1",
+      "@angular/service-worker": "^5.1.1",
       "@ngrx/core": "^1.2.0",
       "@ngrx/effects": "^4.1.1",
       "@ngrx/router-store": "^4.1.1",
@@ -58,12 +59,12 @@ npm manifest:
       "zone.js": "^0.8.18"
     },
     "devDependencies": {
-      "@angular/cli": "1.6.0",
-      "@angular/compiler-cli": "^5.1.0",
-      "@angular/language-service": "^5.1.0",
+      "@angular/cli": "1.6.1",
+      "@angular/compiler-cli": "^5.1.1",
+      "@angular/language-service": "^5.1.1",
       "@types/jasmine": "~2.8.2",
       "@types/jasminewd2": "~2.0.3",
-      "@types/node": "~8.0.58",
+      "@types/node": "~8.5.1",
       "codelyzer": "^4.0.2",
       "jasmine-core": "~2.8.0",
       "jasmine-spec-reporter": "~4.2.1",
@@ -74,10 +75,10 @@ npm manifest:
       "karma-jasmine": "~1.1.1",
       "karma-jasmine-html-reporter": "^0.2.2",
       "prettier": "^1.9.2",
-      "protractor": "~5.2.1",
+      "protractor": "~5.2.2",
       "sw-precache": "^5.2.0",
       "sw-precache-webpack-plugin": "^0.11.4",
-      "ts-node": "~4.0.1",
+      "ts-node": "~4.0.2",
       "tslint": "~5.8.0",
       "typescript": "~2.6.2"
     }

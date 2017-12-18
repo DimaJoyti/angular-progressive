@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from "@angular/forms";
 
 import { LoginComponent } from "./login/login.component";
@@ -10,7 +11,7 @@ import { ContentfulService } from "./content/contentful.service";
 import { MdToHtmlPipe } from "./content/md-to-html.pipe";
 
 @NgModule({
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   exports: [ProductComponent, ContentComponent, LoginComponent],
   declarations: [ProductComponent, ContentComponent, LoginComponent, MdToHtmlPipe],
   providers: [ProductService, ContentfulService]

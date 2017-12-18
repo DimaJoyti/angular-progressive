@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { LayoutModule } from './layout/layout.module';
 import { PagesModule } from './pages/pages.module';
+import { CoreModule } from './core/core.module';
 
 import { AngularFireModule } from "angularfire2";
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -19,10 +19,10 @@ export const firebaseConfig = environment.firebaseConfig;
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'angular-progressive' }),
     LayoutModule,
     PagesModule,
-    FormsModule,
+    CoreModule,
     AppRoutingModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
