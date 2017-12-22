@@ -28,11 +28,11 @@ export const firebaseConfig = environment.firebaseConfig;
     FeatureModule,
     SharedModule,
     LayoutModule,
-    AngularFireAuthModule,
-    AngularFireDatabaseModule,
-    AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
+    // AngularFireAuthModule,
+    // AngularFireDatabaseModule,
+    // AngularFirestoreModule,
+    // AngularFireModule.initializeApp(environment.firebaseConfig),
+    // environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
   ],
   providers: [],
   bootstrap: [AppComponent]
