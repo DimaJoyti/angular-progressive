@@ -1,43 +1,5 @@
-<div style="text-align:center">
-  <h1>
-    Dynamic reactive forms in Angular
-  </h1>
-</div>
-
-<form [formGroup]="form">
-  <div *ngFor="let prop of personProps">
-      <label>{{ prop.label }}:</label>
-
-      <div [ngSwitch]="prop.type">
-        <input *ngSwitchCase="'text'" [type]="prop.type" [formControlName]="prop.key">
-        <input *ngSwitchCase="'number'" [type]="prop.type" [formControlName]="prop.key">
-  
-        <div *ngSwitchCase="'radio'">
-          <label *ngFor="let option of prop.options">
-            <input type="radio"
-              [name]="prop.key"
-              [formControlName]="prop.key"
-              [value]="option.value">
-              {{ option.label }}
-          </label>
-        </div>
-
-        <select *ngSwitchCase="'select'" 
-          [formControlName]="prop.key">
-            <option *ngFor="let option of prop.options" 
-              [value]="option.value">
-              {{ option.label }}
-            </option>
-        </select>
-      </div>
-      <div class="error" *ngIf="form.get(prop.key).invalid && (form.get(prop.key)).dity || form.get">
-        <!-- <div *ngIf="form.get(prop.key).errors.required">
-          You have to provide a value.
-        </div>
-        <div *ngIf="form.get(prop.key).errors.min">
-          You have to provide a value greater or equal to {{ form.get(prop.key).errors.min.min}}
-        </div> -->
-      </div>
-  </div>
+<form [formGroup]="form" (ngSubmit)="submit(userModel)">
+  <formly-form [model]="userModel" [fields]="userFields">
+    <button type="submit" class="btn btn-default">Submit</button>
+  </formly-form>
 </form>
-<pre>{{ form.value | json }}</pre>
