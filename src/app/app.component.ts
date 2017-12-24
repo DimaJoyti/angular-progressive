@@ -1,3 +1,4 @@
+import { Validators } from '@angular/forms';
 import { Component } from "@angular/core";
 
 @Component({
@@ -10,12 +11,18 @@ export class AppComponent {
     firstname: {
       label: "Firstname",
       value: "Ivan",
-      type: "text"
+      type: "text",
+      validators: {
+        required: true
+      }
     },
     age: {
       label: "Age",
       value: 27,
-      type: "number"
+      type: "number",
+      validators: {
+        min: 18
+      }
     },
     gender: {
       label: "Gender",

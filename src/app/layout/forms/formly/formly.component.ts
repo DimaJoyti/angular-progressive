@@ -2,8 +2,8 @@ import { Component, OnInit, Input } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 @Component({
-  selector: "dynamic",
-  templateUrl: "dynamic.component.html",
+  selector: "formly",
+  templateUrl: "formly.component.html",
   styles: [
     `
   .error {
@@ -12,7 +12,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
   `
   ]
 })
-export class DynamicComponent implements OnInit {
+export class FormlyComponent implements OnInit {
   form: FormGroup;
   @Input() formDataObj;
   personProps = [];
