@@ -25,7 +25,7 @@ import { environment } from '../environments/environment.prod';
     LayoutModule,
     StatesModule,
     CoreModule,
-    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
+    //environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
   ],
   providers: [],
   bootstrap: [AppComponent]
