@@ -10,6 +10,7 @@ import { ProductService } from "./product/product.service";
 import { PeopleComponent } from "./people/people.component";
 import { PeopleService } from "./people/people.service";
 import { LessonsComponent } from "./lessons/lessons.component";
+import { PostsComponent } from './posts/posts.component';
 import { MdToHtmlPipe } from "./content/md-to-html.pipe";
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MdToHtmlPipe } from "./content/md-to-html.pipe";
     ContentComponent,
     LoginComponent,
     PeopleComponent,
-    LessonsComponent
+    LessonsComponent,
+    PostsComponent
   ],
   declarations: [
     ProductComponent,
@@ -27,6 +29,7 @@ import { MdToHtmlPipe } from "./content/md-to-html.pipe";
     LoginComponent,
     PeopleComponent,
     LessonsComponent,
+    PostsComponent,
     MdToHtmlPipe
   ],
   providers: [ProductService, PeopleService]
