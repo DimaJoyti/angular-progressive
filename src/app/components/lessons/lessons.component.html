@@ -1,0 +1,8 @@
+<ul>Lessons
+  <li *ngFor="let lesson of lesson$ | async">
+    {{ lesson.title }}; {{ lesson.endDate | date }}
+  </li>
+</ul>
+
+<button (click)="previousLesson()">Previous</button>
+<button (click)="nextLesson()">Next</button>

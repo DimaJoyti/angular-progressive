@@ -9,6 +9,7 @@ import { ProductComponent } from "./product/product.component";
 import { ProductService } from "./product/product.service";
 import { PeopleComponent } from "./people/people.component";
 import { PeopleService } from "./people/people.service";
+import { LessonsComponent } from "./lessons/lessons.component";
 import { MdToHtmlPipe } from "./content/md-to-html.pipe";
 
 @NgModule({
@@ -17,15 +18,17 @@ import { MdToHtmlPipe } from "./content/md-to-html.pipe";
     ProductComponent,
     ContentComponent,
     LoginComponent,
-    PeopleComponent
+    PeopleComponent,
+    LessonsComponent
   ],
   declarations: [
     ProductComponent,
     ContentComponent,
     LoginComponent,
     PeopleComponent,
+    LessonsComponent,
     MdToHtmlPipe
   ],
-  providers: [ContentfulService, ProductService, PeopleService]
+  providers: [ProductService, PeopleService]
 })
 export class FeatureModule {}
