@@ -1,3 +1,10 @@
-<p>
-  login works!
-</p>
+<div *ngIf="afAuth.authState | async as authUser; else loginTemplate">
+  <img [src]="authUser.photoURL" >
+  <h1>{{ authUser.displayName }}</h1>
+  <button (click)="logout()">Logout</button>
+  <pre>{{ authUser | json }}</pre>
+</div>
+
+<ng-template #loginTemplate>
+  <button (click)="login()">Login with Google</button>
+</ng-template>
