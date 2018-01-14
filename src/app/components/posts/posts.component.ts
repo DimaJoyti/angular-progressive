@@ -3,11 +3,11 @@ import { HttpClient, HttpParams, HttpHeaders } from "@angular/common/http";
 import { Post } from "../../models/post.mode";
 
 import { Observable } from "rxjs/Observable";
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/retry';
-import 'rxjs/add/observable/of';
-
+import { retry } from "rxjs/operator/retry";
+import "rxjs/add/operator/map";
+import "rxjs/add/operator/catch";
+import "rxjs/add/operator/retry";
+import "rxjs/add/observable/of";
 
 @Component({
   selector: "posts",
@@ -37,11 +37,12 @@ export class PostsComponent {
       body: "Hello World!"
     };
 
-    this.newPost = this.http.post(this.ROOT_URL + "/posts", data);
-    .retry(3)
-    .catch(err => {
-      console.log(err)
-      return Observable.of(err)
-    })
+    this.newPost = this.http
+      .post(this.ROOT_URL + "/posts", data)
+      .retry(3)
+      .catch(err => {
+        console.log(err);
+        return Observable.of(err);
+      });
   }
 }

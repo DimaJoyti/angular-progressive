@@ -3,8 +3,7 @@ import * as contentful from 'contentful';
 import * as marked from 'marked';
 import { Observable } from 'rxjs/Observable';
 
-import { environment } from '../../../environments/environment';
-
+import { environment } from '../../../environments/environment.prod';
 
 @Injectable()
 export class ContentfulService {
@@ -13,8 +12,6 @@ export class ContentfulService {
     space: environment.contentful.spaceId,
     accessToken: environment.contentful.token
   })
-
-  constructor() { }
   
   // console logs a response for debugging
   logContent(contentId) {
