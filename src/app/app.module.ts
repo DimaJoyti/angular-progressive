@@ -11,9 +11,10 @@ import { StatesModule } from "./states/states.module";
 import { CoreModule } from "./core/core.module";
 
 import { environment } from "../environments/environment.prod";
+import { PaymentComponent } from './components/payment/payment.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, PaymentComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

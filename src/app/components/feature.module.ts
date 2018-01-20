@@ -6,15 +6,21 @@ import { LoginComponent } from "./login/login.component";
 import { ContentComponent } from "./content/content.component";
 import { ContentfulService } from "./content/contentful.service";
 import { ProductComponent } from "./product/product.component";
-import { ProductService } from "./product/product.service";
 import { PeopleComponent } from "./people/people.component";
-import { PeopleService } from "./people/people.service";
 import { LessonsComponent } from "./lessons/lessons.component";
-import { PostsComponent } from './posts/posts.component';
+import { PostsComponent } from "./posts/posts.component";
 import { MdToHtmlPipe } from "./content/md-to-html.pipe";
 
+import { PeopleService } from "./people/people.service";
+import { ProductService } from "./product/product.service";
+import { PaymentService } from "./payment/peyment.service";
+
 @NgModule({
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    FormsModule, 
+    ReactiveFormsModule
+  ],
   exports: [
     ProductComponent,
     ContentComponent,
@@ -32,6 +38,6 @@ import { MdToHtmlPipe } from "./content/md-to-html.pipe";
     PostsComponent,
     MdToHtmlPipe
   ],
-  providers: [ProductService, PeopleService]
+  providers: [PeopleService, ProductService, PaymentService]
 })
 export class FeatureModule {}
