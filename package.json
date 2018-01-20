@@ -30,6 +30,7 @@
     "@angular/service-worker": "^5.2.0",
     "angularfire2": "^5.0.0-rc.4",
     "firebase": "4.8.2",
+    "faker": "^4.1.0",
     "@ngrx/core": "^1.2.0",
     "@ngrx/effects": "^4.1.1",
     "@ngrx/router-store": "^4.1.1",
