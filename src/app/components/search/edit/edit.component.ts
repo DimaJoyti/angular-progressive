@@ -16,14 +16,15 @@ export class EditComponent implements OnInit, OnDestroy {
 
   sub: Subscription;
 
-  constructor(private route: ActivatedRoute,
-              private router: Router,
-              private service: SearchService) {
-  }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private service: SearchService
+  ) {}
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      const id = +params['id']; // (+) converts string 'id' to a number
+      const id = +params["id"]; // (+) converts string 'id' to a number
       this.service.get(id).subscribe(person => {
         if (person) {
           this.editName = person.name;
@@ -42,7 +43,7 @@ export class EditComponent implements OnInit, OnDestroy {
   }
 
   cancel() {
-    this.router.navigate(['/search']);
+    this.router.navigate(["/search"]);
   }
 
   save() {
@@ -55,9 +56,9 @@ export class EditComponent implements OnInit, OnDestroy {
 
   gotoList() {
     if (this.person) {
-      this.router.navigate(['/search', {term: this.person.name}]);
+      this.router.navigate(["/search", { term: this.person.name }]);
     } else {
-      this.router.navigate(['/search']);
+      this.router.navigate(["/search"]);
     }
   }
 }
