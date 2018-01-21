@@ -12,9 +12,10 @@ import { CoreModule } from "./core/core.module";
 
 import { environment } from "../environments/environment.prod";
 import { PaymentComponent } from './components/payment/payment.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
-  declarations: [AppComponent, PaymentComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

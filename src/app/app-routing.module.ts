@@ -1,13 +1,17 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { ProductComponent } from './components/product/product.component';
-import { ContentComponent } from './components/content/content.component';
-import { LoginComponent } from './components/login/login.component';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule, PreloadAllModules } from "@angular/router";
+import { ProductComponent } from "./components/product/product.component";
+import { ContentComponent } from "./components/content/content.component";
+import { LoginComponent } from "./components/login/login.component";
+import { SearchComponent } from "./components/search/search.component";
+import { EditComponent } from "./components/search/edit/edit.component";
 
 const routes: Routes = [
-  { path: "", component: ProductComponent},
-  { path: "login", component: LoginComponent},
-  { path: "content", component: ContentComponent},
+  { path: "", component: ProductComponent },
+  { path: "login", component: LoginComponent },
+  { path: "content", component: ContentComponent },
+  { path: "search", component: SearchComponent },
+  { path: "edit/:id", component: EditComponent }
 ];
 
 @NgModule({
@@ -18,4 +22,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
