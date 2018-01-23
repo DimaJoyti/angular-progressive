@@ -13,12 +13,14 @@ import { PeopleComponent } from "./people/people.component";
 import { LessonsComponent } from "./lessons/lessons.component";
 import { PostsComponent } from "./posts/posts.component";
 import { MdToHtmlPipe } from "./content/md-to-html.pipe";
+import { PaymentComponent } from './payment/payment.component';
+import { CompanyComponent } from "./company/company.component";
+import { EditComponent } from './search/edit/edit.component';
 
 import { PeopleService } from "./people/people.service";
 import { ProductService } from "./product/product.service";
 import { PaymentService } from "./payment/peyment.service";
 import { SearchService } from "./search/search.service";
-import { EditComponent } from './search/edit/edit.component';
 
 @NgModule({
   imports: [
@@ -35,6 +37,8 @@ import { EditComponent } from './search/edit/edit.component';
     PeopleComponent,
     LessonsComponent,
     PostsComponent,
+    PaymentComponent,
+    CompanyComponent,
     SearchComponent,
     EditComponent
   ],
@@ -46,6 +50,8 @@ import { EditComponent } from './search/edit/edit.component';
     LessonsComponent,
     PostsComponent,
     MdToHtmlPipe,
+    PaymentComponent,
+    CompanyComponent,
     SearchComponent,
     EditComponent
   ],

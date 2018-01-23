@@ -24,8 +24,8 @@ import { SearchComponent } from './components/search/search.component';
     SharedModule,
     LayoutModule,
     StatesModule,
-    CoreModule
-    //environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
+    CoreModule,
+    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
   ],
   providers: [],
   bootstrap: [AppComponent]

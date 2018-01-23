@@ -23,4 +23,8 @@ export class LessonsComponent {
     this.lessonRef = this.afs.collection("Lesson");
     this.lesson$ = this.lessonRef.valueChanges();
   }
+
+  previousLesson() {}
+
+  nextLesson() {}
 }
