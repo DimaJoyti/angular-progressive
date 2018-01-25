@@ -7,8 +7,9 @@ import { SearchComponent } from "./components/search/search.component";
 import { EditComponent } from "./components/search/edit/edit.component";
 
 const routes: Routes = [
-  { path: "", component: ProductComponent },
+  { path: "", redirectTo: 'product', pathMatch: 'full' },
   { path: "login", component: LoginComponent },
+  { path: "product", component: ProductComponent },
   { path: "content", component: ContentComponent },
   { path: "search", component: SearchComponent },
   { path: "edit/:id", component: EditComponent }

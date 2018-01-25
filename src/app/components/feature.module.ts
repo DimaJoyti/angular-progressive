@@ -28,7 +28,7 @@ import { SearchService } from "./search/search.service";
     HttpModule,
     RouterModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule 
   ],
   exports: [
     ProductComponent,
