@@ -1,7 +1,6 @@
 import { NgModule } from "@angular/core";
 import { SharedModule } from "../shared/shared.module";
 
-import { LoginComponent } from "./login/login.component";
 import { SearchComponent } from "./search/search.component";
 import { ContentComponent } from "./content/content.component";
 import { ContentfulService } from "./content/contentful.service";
@@ -18,25 +17,16 @@ import { PeopleService } from "./people/people.service";
 import { ProductService } from "./product/product.service";
 import { PaymentService } from "./payment/peyment.service";
 import { SearchService } from "./search/search.service";
+import { ProductsComponent } from "./products/products.component";
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [SharedModule],
-  exports: [
-    ProductComponent,
-    ContentComponent,
-    LoginComponent,
-    PeopleComponent,
-    LessonsComponent,
-    PostsComponent,
-    PaymentComponent,
-    CompanyComponent,
-    SearchComponent,
-    EditComponent
-  ],
+  exports: [],
   declarations: [
+    ProductsComponent,
     ProductComponent,
     ContentComponent,
-    LoginComponent,
     PeopleComponent,
     LessonsComponent,
     PostsComponent,
@@ -44,7 +34,8 @@ import { SearchService } from "./search/search.service";
     PaymentComponent,
     CompanyComponent,
     SearchComponent,
-    EditComponent
+    EditComponent,
+    LoginComponent
   ],
   providers: [PeopleService, ProductService, PaymentService, SearchService]
 })

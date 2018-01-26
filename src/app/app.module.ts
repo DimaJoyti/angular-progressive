@@ -9,6 +9,7 @@ import { SharedModule } from "./shared/shared.module";
 import { LayoutModule } from "./layout/layout.module";
 import { StatesModule } from "./states/states.module";
 import { CoreModule } from "./core/core.module";
+import { AuthModule } from "./auth/auth.module";
 
 import { environment } from "../environments/environment.prod";
 import { PaymentComponent } from './components/payment/payment.component';
@@ -25,7 +26,8 @@ import { SearchComponent } from './components/search/search.component';
     LayoutModule,
     StatesModule,
     CoreModule,
-    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
+    AuthModule,
+    //environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
   ],
   providers: [],
   bootstrap: [AppComponent]
