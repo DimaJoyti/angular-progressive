@@ -18,7 +18,10 @@ import { ProductService } from "./product/product.service";
 import { PaymentService } from "./payment/peyment.service";
 import { SearchService } from "./search/search.service";
 import { ProductsComponent } from "./products/products.component";
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from "./login/login.component";
+import { UploadComponent } from "./upload/upload.component";
+import { DropZoneDirective } from "./upload/drop-zone.directive";
+import { FileSizePipe } from "./upload/file-size.pipe";
 
 @NgModule({
   imports: [SharedModule],
@@ -35,7 +38,10 @@ import { LoginComponent } from './login/login.component';
     CompanyComponent,
     SearchComponent,
     EditComponent,
-    LoginComponent
+    LoginComponent,
+    UploadComponent,
+    DropZoneDirective,
+    FileSizePipe
   ],
   providers: [PeopleService, ProductService, PaymentService, SearchService]
 })
