@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: "", redirectTo: "products", pathMatch: "full" },
   { path: "products", component: ProductsComponent },
   { path: "products/:id", component: ProductComponent },
-  { path: "login", loadChildren: "./auth/auth.module#AuthModule" },  
+  { path: "login", loadChildren: "./auth/auth.module#AuthModule" },
   { path: "content", component: ContentComponent },
   { path: "search", component: SearchComponent },
   { path: "edit/:id", component: EditComponent },
@@ -23,10 +23,10 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      //enableTracing: true,
+      // enableTracing: true,
       preloadingStrategy: PreloadAllModules
     })
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
