@@ -6,18 +6,18 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   imports: [
-    CommonModule, 
+    CommonModule,
     RouterModule,
-    HttpModule, 
-    FormsModule, 
+    HttpModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   declarations: [],
   exports: [
-    CommonModule, 
+    CommonModule,
     RouterModule,
-    HttpModule, 
-    FormsModule, 
+    HttpModule,
+    FormsModule,
     ReactiveFormsModule
   ]
 })

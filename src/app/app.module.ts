@@ -10,6 +10,7 @@ import { LayoutModule } from "./layout/layout.module";
 import { StatesModule } from "./states/states.module";
 import { CoreModule } from "./core/core.module";
 import { AuthModule } from "./auth/auth.module";
+import { GridModule } from "./grid/grid.module";
 
 import { environment } from "../environments/environment.prod";
 import { PaymentComponent } from './components/payment/payment.component';
@@ -27,6 +28,7 @@ import { SearchComponent } from './components/search/search.component';
     StatesModule,
     CoreModule,
     AuthModule,
+    GridModule
     //environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
   ],
   providers: [],

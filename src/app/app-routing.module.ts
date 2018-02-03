@@ -6,13 +6,16 @@ import { ProductComponent } from "./components/product/product.component";
 import { ContentComponent } from "./components/content/content.component";
 import { SearchComponent } from "./components/search/search.component";
 import { EditComponent } from "./components/search/edit/edit.component";
+import { PeopleComponent } from "./components/people/people.component";
 import { UploadComponent } from "./components/upload/upload.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "products", pathMatch: "full" },
   { path: "products", component: ProductsComponent },
   { path: "products/:id", component: ProductComponent },
+  { path: "people", component: PeopleComponent },
   { path: "login", loadChildren: "./auth/auth.module#AuthModule" },
+  { path: 'grid', loadChildren: './grid/grid.module#GridModule' },
   { path: "content", component: ContentComponent },
   { path: "search", component: SearchComponent },
   { path: "edit/:id", component: EditComponent },

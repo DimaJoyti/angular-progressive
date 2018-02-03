@@ -18,5 +18,5 @@ export class PeopleService {
     return this.http
       .get<Person>('/assets/data/people.json');
   }
-  
+
 }
