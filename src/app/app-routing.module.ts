@@ -8,6 +8,7 @@ import { SearchComponent } from "./components/search/search.component";
 import { EditComponent } from "./components/search/edit/edit.component";
 import { PeopleComponent } from "./components/people/people.component";
 import { UploadComponent } from "./components/upload/upload.component";
+import { ChartComponent } from "./charts/chart.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "products", pathMatch: "full" },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: "people", component: PeopleComponent },
   { path: "login", loadChildren: "./auth/auth.module#AuthModule" },
   { path: 'grid', loadChildren: './grid/grid.module#GridModule' },
+  { path: "chart", component: ChartComponent },
   { path: "content", component: ContentComponent },
   { path: "search", component: SearchComponent },
   { path: "edit/:id", component: EditComponent },
