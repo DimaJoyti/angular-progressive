@@ -27,8 +27,8 @@ import { SearchComponent } from './components/search/search.component';
     LayoutModule,
     StatesModule,
     CoreModule,
-    ChartModule
-    //environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
+    ChartModule,
+    //ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
   ],
   providers: [],
   bootstrap: [AppComponent]

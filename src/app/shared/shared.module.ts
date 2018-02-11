@@ -3,6 +3,7 @@ import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { HttpModule } from "@angular/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { LoaderComponent } from "./loader/loader.component";
 
 @NgModule({
   imports: [
@@ -12,13 +13,16 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [],
+  declarations: [
+    LoaderComponent
+  ],
   exports: [
     CommonModule,
     RouterModule,
     HttpModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LoaderComponent
   ]
 })
 export class SharedModule {}
