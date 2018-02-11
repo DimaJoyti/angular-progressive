@@ -18,6 +18,7 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "",
+      "serviceWorker": true,
       "styles": [
         "../node_modules/font-awesome/scss/font-awesome.scss",
         "../node_modules/bulma/css/bulma.css",
@@ -31,8 +32,7 @@
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
-      },
-      "serviceWorker": true
+      }
     }
   ],
   "e2e": {
@@ -61,6 +61,10 @@
   },
   "defaults": {
     "styleExt": "scss",
-    "component": {}
+    "component": {
+    }
+  },
+  "warnings": {
+    "typescriptMismatch": false
   }
 }
