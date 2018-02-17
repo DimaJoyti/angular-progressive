@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule, PreloadAllModules } from "@angular/router";
-import { AuthModule } from './auth/auth.module';
+import { AuthModule } from "./auth/auth.module";
 import { ProductsComponent } from "./components/products/products.component";
 import { ProductComponent } from "./components/product/product.component";
 import { ContentComponent } from "./components/content/content.component";
@@ -12,11 +12,19 @@ import { ChartComponent } from "./charts/chart.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "products", pathMatch: "full" },
-  { path: "products", component: ProductsComponent },
+  {
+    path: "products",
+    component: ProductsComponent,
+    data: { animation: "products" }
+  },
   { path: "products/:id", component: ProductComponent },
-  { path: "people", component: PeopleComponent },
-  { path: "login", loadChildren: "./auth/auth.module#AuthModule" },
-  { path: 'grid', loadChildren: './grid/grid.module#GridModule' },
+  { path: "people", component: PeopleComponent, data: { animation: "people" } },
+  {
+    path: "login",
+    loadChildren: "./auth/auth.module#AuthModule",
+    data: { animation: "login" }
+  },
+  { path: "grid", loadChildren: "./grid/grid.module#GridModule" },
   { path: "chart", component: ChartComponent },
   { path: "content", component: ContentComponent },
   { path: "search", component: SearchComponent },
@@ -28,10 +36,11 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
+      useHash: true
       // enableTracing: true,
-      preloadingStrategy: PreloadAllModules
+      // preloadingStrategy: PreloadAllModules
     })
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

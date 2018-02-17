@@ -1,5 +1,6 @@
 <header></header>
 
-<router-outlet></router-outlet>
-
-<footer></footer>
+<div [@routerAnimation]="getRouteAnimation(route)">
+    <router-outlet #route="outlet"></router-outlet>
+    <!-- <footer></footer> -->
+</div>
