@@ -9,14 +9,14 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 
 @Injectable()
-export class ProductsService {
+export class ProductService {
     private _productUrl = '/assets/data/products.json';
 
     constructor(private _http: HttpClient) { }
 
     getProducts(): Observable<IProduct[]> {
         return this._http.get<IProduct[]>(this._productUrl)
-            .do(data => console.log('All: ' + JSON.stringify(data)))
+            //.do(data => console.log('All: ' + JSON.stringify(data)))
             .catch(this.handleError);
     }
 
