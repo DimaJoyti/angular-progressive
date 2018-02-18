@@ -77,10 +77,7 @@
       "check-whitespace"
     ],
     "prefer-const": true,
-    "quotemark": [
-      true,
-      "double"
-    ],
+    "quotemark": [],
     "radix": true,
     "semicolon": [
       true,
