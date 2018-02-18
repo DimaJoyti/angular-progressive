@@ -20,8 +20,19 @@ export class ProductsService {
             .catch(this.handleError);
     }
 
+    getProduct(id: number): Observable<IProduct> {
+        return this.getProducts()
+            .map((products: IProduct[]) => products.find(p => p.productId === id));
+    }
+
     private handleError(err: HttpErrorResponse) {
-        console.error(err.message);
-        return Observable.throw(err.message);
+        let errorMessage = '';
+        if (err.error instanceof Error) {
+            errorMessage = `An error occurred: ${err.error.message}`;
+        } else {
+            errorMessage = `Server returned code: ${err.status}, error message is: ${err.message}`;
+        }
+        console.error(errorMessage);
+        return Observable.throw(errorMessage);
     }
 }
