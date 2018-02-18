@@ -33,4 +33,4 @@ import { environment } from "../environments/environment.prod";
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

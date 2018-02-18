@@ -24,7 +24,6 @@ const routes: Routes = [
     loadChildren: "./auth/auth.module#AuthModule",
     data: { animation: "login" }
   },
-  { path: "grid", loadChildren: "./grid/grid.module#GridModule" },
   { path: "chart", component: ChartComponent },
   { path: "content", component: ContentComponent },
   { path: "search", component: SearchComponent },
@@ -43,4 +42,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
