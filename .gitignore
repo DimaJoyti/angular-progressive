@@ -45,4 +45,4 @@ Thumbs.db
 src/environments
 
 # functions
-/functions/node_modules
+functions

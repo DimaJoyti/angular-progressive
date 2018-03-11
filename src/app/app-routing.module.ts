@@ -7,10 +7,12 @@ import { EditComponent } from "./components/search/edit/edit.component";
 import { PeopleComponent } from "./components/people/people.component";
 import { UploadComponent } from "./components/upload/upload.component";
 import { ChartComponent } from "./charts/chart.component";
+import { PizzaOrderComponent } from "./components/pizza/pizza-order/pizza-order.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "products", pathMatch: "full" },
   { path: "people", component: PeopleComponent, data: { animation: "people" } },
+  { path: "pizza", component: PizzaOrderComponent, data: { animation: "people" } },
   { path: "login", loadChildren: "./auth/auth.module#AuthModule", data: { animation: "login" }},
   { path: "chart", component: ChartComponent },
   { path: "content", component: ContentComponent },

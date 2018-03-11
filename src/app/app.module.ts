@@ -13,6 +13,7 @@ import { StatesModule } from "./states/states.module";
 import { CoreModule } from "./core/core.module";
 import { AuthModule } from "./auth/auth.module";
 import { ChartModule } from "./charts/chart.module";
+import { PizzaModule } from "./components/pizza/pizza.module";
 
 import { environment } from "../environments/environment.prod";
 
@@ -30,6 +31,7 @@ import { environment } from "../environments/environment.prod";
     StatesModule,
     CoreModule,
     ChartModule,
+    PizzaModule
     //ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
   ],
   providers: [],

@@ -4,15 +4,18 @@ import { CommonModule } from "@angular/common";
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { EffectsModule } from "@ngrx/effects";
+import { reducers } from './reducers';
+
+import { environment } from "../../environments/environment";
 
 @NgModule({
   imports: [
-    // StoreDevtoolsModule.instrument({ maxAge: 25 }),
-    // StoreModule.forRoot(reducers),
-    // EffectsModule.forRoot([])
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([]),
+    environment.production ? [] : StoreDevtoolsModule.instrument({ maxAge: 25 })
   ],
   exports: [],
   declarations: [],
   providers: []
 })
-export class StatesModule {}
+export class StatesModule { }
