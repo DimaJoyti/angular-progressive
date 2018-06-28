@@ -10,8 +10,8 @@ import { FeatureModule } from "./components/feature.module";
 import { SharedModule } from "./shared/shared.module";
 import { LayoutModule } from "./layout/layout.module";
 import { StatesModule } from "./states/states.module";
-import { CoreModule } from "./core/core.module";
 import { AuthModule } from "./auth/auth.module";
+import { CoreModule } from "./core/core.module";
 import { ChartModule } from "./charts/chart.module";
 import { PizzaModule } from "./components/pizza/pizza.module";
 import { ItemsModule } from "./components/items/items.module";
@@ -30,6 +30,7 @@ import { environment } from "../environments/environment.prod";
     SharedModule,
     LayoutModule,
     StatesModule,
+    AuthModule,
     CoreModule,
     ChartModule,
     PizzaModule,

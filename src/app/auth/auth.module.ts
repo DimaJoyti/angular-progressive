@@ -7,6 +7,10 @@ import { RegistrationComponent } from './registration/registration.component';
 import { AuthComponent } from './auth.component';
 import { AuthRoutingModule } from './auth-routing.module';
 
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth.guard';
+import { NotifyService } from './notify.service';
+
 @NgModule({
   imports: [
     AuthRoutingModule,
@@ -16,6 +20,7 @@ import { AuthRoutingModule } from './auth-routing.module';
     LoginComponent,
     RegistrationComponent,
     AuthComponent
-  ]
+  ],
+  providers: [AuthService, AuthGuard, NotifyService]
 })
 export class AuthModule { }
