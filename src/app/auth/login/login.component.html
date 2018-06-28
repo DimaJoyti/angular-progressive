@@ -1,37 +1,35 @@
-<section class="hero is-fullheight is-dark is-bold">
+<div *ngIf="!(auth.user | async); else alreadyLoggedIn">
 
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-vcentered">
-        <div class="column is-4 is-offset-4">
-          <h1 class="title">
-            Login
-          </h1>
-          <div class="box">
-            <label class="label">Email</label>
-            <p class="control">
-              <input class="input" type="text" placeholder="jsmith@example.org">
-            </p>
-            <label class="label">Password</label>
-            <p class="control">
-              <input class="input" type="password" placeholder="●●●●●●●">
-            </p>
-            <hr>
-            <p class="control">
-              <button class="button is-primary">Login</button>
-              <button class="button is-default">Cancel</button>
-            </p>
-          </div>
-          <p class="has-text-centered">
-            <a href="register.html">Register an Account</a>
-            |
-            <a href="#">Forgot password</a>
-            |
-            <a href="#">Need help?</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <button (click)="signInWithGoogle()" class="button btn-social btn-google">
+      <i class="fa fa-google fa-lg"></i> Connect Google
+    </button>
 
-</section>
+    <button (click)="signInWithGithub()" class="button btn-social btn-github" disabled>
+      <i class="fa fa-github fa-lg"></i> Connect GitHub
+    </button>
+
+    <button (click)="signInWithFacebook()" class="button  btn-social btn-facebook" disabled>
+      <i class="fa fa-facebook fa-lg"></i> Connect Facebook
+    </button>
+
+    <button (click)="signInWithTwitter()" class="button  btn-social btn-twitter" disabled>
+      <i class="fa fa-twitter fa-lg"></i> Connect Twitter
+    </button>
+
+    <hr>
+
+    <h3>Anonymous Login</h3>
+
+      <button (click)="signInAnonymously()" class="button button-info">
+        <i class="fa fa-user-secret fa-lg"></i> Connect Anonymously
+      </button>
+
+    <hr>
+
+</div>
+
+<ng-template #alreadyLoggedIn>
+  <p class="text-success">
+    You are logged in <i class="fa fa-thumbs-up"></i>
+  </p>
+</ng-template>

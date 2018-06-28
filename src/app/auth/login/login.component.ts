@@ -1,23 +1,42 @@
-import { Component, OnInit } from "@angular/core";
-import { AngularFireAuth } from "angularfire2/auth";
-import * as firebase from "firebase/app";
+import { Component } from "@angular/core";
+import { Router } from "@angular/router";
+import { AuthService } from "../auth.service";
 
 @Component({
   selector: "login",
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.scss"]
 })
-export class LoginComponent implements OnInit {
-  constructor(public afAuth: AngularFireAuth) {}
+export class LoginComponent {
+  constructor(public auth: AuthService, private router: Router) {}
 
-  ngOnInit() {}
-  
-  login() {
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  async signInWithGithub() {
+    await this.auth.githubLogin();
+    return await this.afterSignIn();
   }
-  
-  logout() {
-    this.afAuth.auth.signOut();
+
+  async signInWithGoogle() {
+    await this.auth.googleLogin();
+    return await this.afterSignIn();
   }
-  
+
+  async signInWithFacebook() {
+    await this.auth.facebookLogin();
+    await this.afterSignIn();
+  }
+
+  async signInWithTwitter() {
+    await this.auth.twitterLogin();
+    return await this.afterSignIn();
+  }
+
+  async signInAnonymously() {
+    await this.auth.anonymousLogin();
+    return await this.afterSignIn();
+  }
+
+  private afterSignIn() {
+    // Do after login stuff here, such router redirects, toast messages, etc.
+    return this.router.navigate(["/"]);
+  }
 }

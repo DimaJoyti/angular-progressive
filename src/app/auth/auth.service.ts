@@ -9,8 +9,9 @@ import {
 } from 'angularfire2/firestore';
 import { NotifyService } from './notify.service';
 
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { of } from 'rxjs/observable/of';
 
 interface User {
   uid: string;

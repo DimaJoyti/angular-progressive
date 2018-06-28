@@ -13,8 +13,7 @@ export const firebaseConfig = environment.firebaseConfig;
 @NgModule({
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule,
-    //.enablePersistence(),
+    AngularFirestoreModule.enablePersistence(),
     AngularFireStorageModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule
